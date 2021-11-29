@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>form</title>
+    <link rel="stylesheet" href="./temp.css">
+    <script src="./temp.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../font/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="container-fluid">
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+
+            <form id="form">
+                <h2><span class="fa fa-user"></span> Register User</h2><br>
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-group">
+                            <div class="input-group"> 
+                                <input onkeyup="VerifyUser()" required autofocus id="txtName" type="text"
+                                    class="form-control" placeholder="User Name">
+                                <h7 id="msg"></h7>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input id="txtPwd" autofocus onkeyup="VerifyPassword()" type="password"
+                                    class="form-control" required placeholder="password">
+                            </div>
+                            <h7 id="msg1"></h7>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input onkeyup="VerifyMobile()" id="txtMobile" name="txtMobile" type="text"
+                                    class="form-control" required placeholder="Mobile No">
+                            </div>
+                            <h7 id="msg3"></h7>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input onkeyup="VerifyEmail()" id="txtEmail" type="email" class="form-control"
+                                    placeholder="Email">
+                            </div>
+                            <h7 id="msg4"></h7>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <select id="txtCity" class="form-control" required placeholder="Your City">
+                                    <option>choose city</option>
+                                    <option>Delhi</option>
+                                    <option>Hyd</option>
+                                    <option>Goa</option>
+                                    <option>Jabalpur</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Choose Gender</label>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                <div>
+                                    <input id="txtMale" type="radio" name="gender" value="Male">
+                                    <label>Male</label>
+                                </div>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <div>
+                                    <input id="txtFemale" type="radio" name="gender" value="Female">
+                                    <label>Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Choose Hobbies</label>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                <div>
+                                    <input onchange="change()" type="checkbox" name="Hobbies" value="Movies"
+                                        id="txtMovies">
+                                    <label>Movies</label>
+                                </div>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <div>
+                                    <input onchange="change()" type="checkbox" name="Hobbies" value="Music"
+                                        id="txtMusic">
+                                    <label>Music</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col">
+                        <input type="file">
+                        <div>
+                            <img src="" id="myImg" alt="image" width="150px" height="350px">
+                        </div>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="comment">comment</label>
+                            <div>
+                                <textarea required id="cmnt" class="form-control" placeholder="comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button id="btn1" type="submit" onclick="savedata()" disabled
+                        class="btn btn-danger ">Register</button>
+                </div>
+
+          </form> 
+                   
+        </div>
+        <div class="col-12">
+            <caption>
+                <h2>product table</h2>
+            </caption>
+            <table class="table table-dark table-bordered" id="form_result">
+                <tr>
+
+                    <th>Name</th>
+                    <th>phone</th>
+                    <th>email</th>
+                    <th>city</th>
+                    <th>gender</th>
+                    <th>Hobbies</th>
+                    <th>comment</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

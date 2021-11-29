@@ -1,0 +1,55 @@
+.input{
+ display: block;
+ margin: 15px 0px;
+ border: none;
+ border-radius: 2px;
+ width: 100%
+ 
+}
+input:hover{
+   background-color:lightyellow;
+}
+/* .redio{
+    position: relative;
+    bottom: 20px;
+    left: 80px;
+    
+} */
+textarea{
+    margin: 15px 0px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    padding: 5;
+    box-shadow: 2px 2px 10px 1px gray;
+}
+
+form{
+    margin: 25% 0%;
+    padding: 25px;
+    background-color: burlywood;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px 1px gray;
+}
+button{
+    border: none;
+    padding: 10px;
+    box-shadow: 2px 2px 5px 1px gray;
+    border-radius:5px;
+    width: 100%;
+    margin: 15px 0px;
+}
+button:hover{
+    background-color: lightslategray;
+    font-size: 19px;
+}
+table, th, td {
+    border:1px dotted black;
+   
+  }
+  #x{
+      border: 1px solid black;
+      width: 160px;
+      height: 20px;
+  }
